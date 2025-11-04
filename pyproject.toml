@@ -1,0 +1,20 @@
+[project]
+name = "train-me-if-you-can"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "cai-securegpt-client",
+    "datasets<4.0.0",
+    "dspy>=3.0.3",
+    "llmlingua>=0.2.2",
+    "tabulate>=0.9.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/cai-securegpt-client",
+]
+
+[tool.uv.sources]
+cai-securegpt-client = { workspace = true }
