@@ -65,9 +65,8 @@ Initializes the LLMLingua-2 compressor and SecureGPT client.
 
 ```bash
 # Install dependencies
-pip install llmlingua datasets httpx
-pip install cai-securegpt-client
-pip install langchain-core
+uv add llmlingua datasets httpx 
+uv add packages/cai-securegpt-client
 ```
 
 ## Usage
