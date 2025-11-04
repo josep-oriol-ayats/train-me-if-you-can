@@ -1,0 +1,65 @@
+{
+  "id": "test-observation-001",
+  "traceId": "test-trace-001",
+  "type": "GENERATION",
+  "name": "AzureChatOpenAI",
+  "startTime": "2025-11-04 09:01:50.097000+00:00",
+  "endTime": "2025-11-04 09:02:03.018000+00:00",
+  "model": "gpt-4o-mini-2024-07-18",
+  "modelParameters": {},
+  "input": [
+    {
+      "role": "system",
+      "content": "You are tasked with performing a contextual compression of a document as part of a system that processes multiple documents. Your goal is to extract only the essential parts of the given context that are relevant to a specific query.\nThis process helps in focusing on the most important information and reducing noise in the context.\nThe query might refer to multiple documents, consider how does apply to a single document in the context as multiple documents might be relevant.\n\nYour task is to extract any parts of the context that are directly relevant to answering this question. Follow these guidelines:\n\n1. Only extract text *AS IS* that is directly related to the query.\n2. Do not modify, paraphrase, or summarize the extracted text. Copy it exactly as it appears in the context.\n3. You may extract multiple separate parts if necessary.\n4. If a header relates to the query, extract also the text under that section.\n5. Preserve headings and subheadings when extracting.\n6. If you find no relevant information in the context, output \"NO_OUTPUT\".\n\nHere is the context document:\n\n<context># Python Programming Guide\n\n## Introduction to Python\n\nPython is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991.\n\n## Key Features\n\n### Easy to Learn\nPython has a simple syntax that makes it easy for beginners to learn programming.\n\n### Versatile\nPython can be used for web development, data analysis, machine learning, automation, and more.\n\n### Large Community\nPython has a vast community that contributes to thousands of libraries and frameworks.\n\n## Installing Python\n\nTo install Python, visit python.org and download the latest version for your operating system. Follow the installation wizard to complete the setup.\n\n## Basic Syntax\n\nPython uses indentation to define code blocks. Here's a simple example:\n\n```python\nif True:\n    print(\"Hello, World!\")\n```\n\n## Popular Libraries\n\n### NumPy\nNumPy is used for numerical computing and provides support for arrays and matrices.\n\n### Pandas\nPandas is a data manipulation library that provides data structures like DataFrames.\n\n### Django\nDjango is a high-level web framework that encourages rapid development.</context>\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Now, consider the following query:\n\n<query>How do I install Python on my computer?</query>\n\nNow, proceed with the task using the provided context and query.\n"
+    }
+  ],
+  "metadata": {
+    "thread_id": "test-thread-001",
+    "ls_provider": "azure",
+    "checkpoint_ns": "research_graph:test-checkpoint",
+    "ls_model_name": "gpt-4o-mini",
+    "ls_model_type": "chat",
+    "langgraph_node": "search_documents",
+    "langgraph_path": [
+      "__pregel_pull",
+      "search_documents"
+    ],
+    "langgraph_step": 2,
+    "ls_temperature": null,
+    "langgraph_triggers": [
+      "branch:to:search_documents"
+    ],
+    "langgraph_checkpoint_ns": "research_graph:test-checkpoint-ns"
+  },
+  "output": {
+    "role": "assistant",
+    "content": "NO_OUTPUT",
+    "additional_kwargs": {
+      "refusal": null
+    }
+  },
+  "usage": {
+    "input": 350,
+    "output": 3,
+    "total": 353,
+    "unit": null
+  },
+  "level": "DEFAULT",
+  "parentObservationId": "test-parent-observation-001",
+  "latency": 12.921,
+  "completionTokens": 3,
+  "promptTokens": 350,
+  "projectId": "test-project",
+  "totalTokens": 353,
+  "completionStartTime": null,
+  "version": null,
+  "statusMessage": null,
+  "promptId": null,
+  "modelId": null,
+  "unit": null
+}
+

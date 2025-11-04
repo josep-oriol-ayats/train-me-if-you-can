@@ -1,0 +1,46 @@
+{
+  "id": "test-observation-002",
+  "traceId": "test-trace-002",
+  "type": "GENERATION",
+  "name": "AzureChatOpenAI",
+  "startTime": "2025-11-04 09:05:50.097000+00:00",
+  "endTime": "2025-11-04 09:06:03.018000+00:00",
+  "model": "gpt-4o-mini-2024-07-18",
+  "modelParameters": {},
+  "input": [
+    {
+      "role": "system",
+      "content": "You are tasked with performing a contextual compression of a document as part of a system that processes multiple documents. Your goal is to extract only the essential parts of the given context that are relevant to a specific query.\nThis process helps in focusing on the most important information and reducing noise in the context.\nThe query might refer to multiple documents, consider how does apply to a single document in the context as multiple documents might be relevant.\n\nYour task is to extract any parts of the context that are directly relevant to answering this question. Follow these guidelines:\n\n1. Only extract text *AS IS* that is directly related to the query.\n2. Do not modify, paraphrase, or summarize the extracted text. Copy it exactly as it appears in the context.\n3. You may extract multiple separate parts if necessary.\n4. If a header relates to the query, extract also the text under that section.\n5. Preserve headings and subheadings when extracting.\n6. If you find no relevant information in the context, output \"NO_OUTPUT\".\n\nHere is the context document:\n\n<context># Machine Learning Basics\n\n## What is Machine Learning?\n\nMachine learning is a subset of artificial intelligence that enables computers to learn from data without being explicitly programmed.\n\n## Types of Machine Learning\n\n### Supervised Learning\nIn supervised learning, the algorithm learns from labeled training data. Examples include classification and regression tasks.\n\n### Unsupervised Learning\nUnsupervised learning works with unlabeled data to find patterns. Clustering and dimensionality reduction are common applications.\n\n### Reinforcement Learning\nReinforcement learning trains agents to make decisions by rewarding desired behaviors.\n\n## Popular Frameworks\n\n### TensorFlow\nTensorFlow is an open-source library developed by Google for machine learning and neural networks.\n\n### PyTorch\nPyTorch is a flexible deep learning framework developed by Facebook's AI Research lab.\n\n### Scikit-learn\nScikit-learn provides simple tools for data mining and analysis, built on NumPy and SciPy.</context>\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Now, consider the following query:\n\n<query>What are the main types of machine learning?</query>\n\nNow, proceed with the task using the provided context and query.\n"
+    }
+  ],
+  "metadata": {
+    "thread_id": "test-thread-002",
+    "ls_provider": "azure",
+    "ls_model_name": "gpt-4o-mini",
+    "ls_model_type": "chat",
+    "langgraph_node": "search_documents"
+  },
+  "output": {
+    "role": "assistant",
+    "content": "NO_OUTPUT",
+    "additional_kwargs": {
+      "refusal": null
+    }
+  },
+  "usage": {
+    "input": 320,
+    "output": 3,
+    "total": 323,
+    "unit": null
+  },
+  "level": "DEFAULT",
+  "latency": 11.5,
+  "completionTokens": 3,
+  "promptTokens": 320,
+  "totalTokens": 323
+}
+

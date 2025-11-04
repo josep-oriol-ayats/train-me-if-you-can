@@ -229,6 +229,7 @@ data/**/*.json
 data/**/*.txt
 !data/**/.gitkeep
 !data/**/_example*.*
+!data/**/test*.*
 
 # wandb
 wandb/
@@ -241,3 +242,4 @@ cache/dspy/*
 # logs
 logs/*.json*
 !logs/.gitkeep
+!/scripts/
